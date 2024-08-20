@@ -620,7 +620,8 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: var(--secondary);
+    background-image: url("../assets/image/background/leaf3.png");
+    background-size: cover;
 }
 .visitTxt{
     margin: 4vw;
@@ -628,6 +629,7 @@ a{
     color: var(--info);
     display: flex;
     flex-direction: column;
+    text-shadow: 0.2vw 0.2vw 0.3vw var(--primary);
 }
 
 .visitPics{

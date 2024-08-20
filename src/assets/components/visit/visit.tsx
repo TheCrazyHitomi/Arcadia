@@ -6,7 +6,7 @@ const VisitAnim: React.FC =() =>{
         <>
             <div className="visitComponent">
                 <div className="visitTxt">
-                    <h2>Pour une visite <br/> plus dynamique</h2>
+                    <h1>Pour une visite <br/> plus dynamique</h1>
                     <h3>bla bla bla</h3>
                 </div>
                 <div className="visitPics">
