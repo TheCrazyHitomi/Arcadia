@@ -11,11 +11,11 @@ const VisitAnim: React.FC =() =>{
                 </div>
                 <div className="visitPics">
                     <div className="animPics">
-                        <h2 className="animTxt">blob</h2>
+                        <h2 className="animTxt">Visite guidée avec un membre<br/>de notre equipe</h2>
                         <img className="animPic" src="src/assets/image/isaac-chou-CYqh_2Vju1E-unsplash.jpg" alt="" />
                     </div>
                     <div className="animPics">
-                        <h2 className="animTxt">plop</h2>
+                        <h2 className="animTxt">Visite à bord<br/>de notre petit train</h2>
                         <img className="animPic" src="src/assets/image/FrontCards/animationPic.jpg"  alt="" />
                     </div>
                 </div>
