@@ -1,4 +1,7 @@
-const LogoVar3 = () =>{
+import React from 'react';
+
+// Typage du composant LogoVar3
+const LogoVar3: React.FC = () =>{
 
     return(
         <svg width="273" height="120" viewBox="0 0 273 120" fill="none" xmlns="http://www.w3.org/2000/svg">

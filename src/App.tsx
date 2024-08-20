@@ -1,10 +1,12 @@
 import React from 'react';
+import Header from './assets/components/header/header';
 
 
-function App() {
+const App: React.FC = () => {
 
   return (
     <>
+      <Header/>
       <h1>
         BANANA !!!
       </h1>
