@@ -4,6 +4,7 @@ import Intro from "../assets/components/intro/intro";
 import VisitAnim from "../assets/components/visit/visit";
 import FrontCards from "../assets/components/frontCards/frontCards";
 import AllOverCards from "../assets/components/mainCards/allOverCards";
+import Contact from "../assets/components/contact/contact";
 
 const Home: React.FC =() =>{
     return(
@@ -13,6 +14,7 @@ const Home: React.FC =() =>{
             <VisitAnim/>
             <FrontCards/>
             <AllOverCards/>
+            <Contact/>
         </>
     )
 }
