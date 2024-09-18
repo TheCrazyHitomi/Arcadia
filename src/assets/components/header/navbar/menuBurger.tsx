@@ -1,17 +1,46 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import 'bootstrap/dist/css/bootstrap.css';
+import React, { useState, useEffect, useRef } from 'react';
+import {Divide as Hamburger} from 'hamburger-react';
+import { Dropdown, DropdownToggle } from 'react-bootstrap';
 
 // Typage du composant avec React.FC
 const MenuBurger: React.FC = () => {
+    const [isOpen, setOpen] = useState(false);
+    const dropdownRef = useRef<HTMLDivElement>(null);
+
+    // Effet pour fermer le menu quand on clique à l'extérieur
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            // Vérifie si le clic est en dehors du dropdown
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+
+        // Cleanup pour éviter les fuites de mémoire
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
-        <>
-            <Button variant="success">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-list" viewBox="0 0 16 16">
-                    <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-                </svg>
-            </Button>{' '}
-        </>
+        <div ref={dropdownRef}>
+            <Dropdown show={isOpen} onToggle={() => setOpen(!isOpen)}>
+                <DropdownToggle variant="success">
+                    <Hamburger toggled={isOpen} toggle={setOpen} size={25} duration={0.5} rounded />
+                </DropdownToggle>
+
+                <Dropdown.Menu className='dropdown-menu'>
+                    <Dropdown.Item className='dropdown-item' href="#/action-1">Accueil</Dropdown.Item>
+                    <Dropdown.Item className='dropdown-item' href="#/action-2">Animations</Dropdown.Item>
+                    <Dropdown.Item className='dropdown-item' href="#/action-3">Habitats</Dropdown.Item>
+                    <Dropdown.Item className='dropdown-item' href="#/action-3">Animaux</Dropdown.Item>
+                    <Dropdown.Item className='dropdown-item' href="#/action-3">Restauration</Dropdown.Item>
+                    <Dropdown.Item style={{color: "var(--warning)"}} className='dropdown-item' href="#/action-3">Connexion</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+        </div>
     );
 };
 
