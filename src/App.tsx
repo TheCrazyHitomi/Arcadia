@@ -1,24 +1,25 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import Animaux from './Pages/Animaux';
+import Animation from './Pages/Animation';
+import Habitats from './Pages/Habitats';
 import Header from './assets/components/header/header';
 import Footer from './assets/components/footer/footer';
-import Home from './Pages/Home';
-
 
 const App: React.FC = () => {
-
   return (
-    <BrowserRouter>
-        <>
-          <Header />
-            <Routes>
-              <Route path="/" element = {<Home/>}/>
-              <Route path="*" element = {<h1>Error 418 : i'm a TeaPot...</h1>}/>
-            </Routes>
-          <Footer />
-          </>
-      </BrowserRouter>
-  )
-}
+    <Router>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/animation" element={<Animation />} />
+        <Route path="/habitats" element={<Habitats />} />
+        <Route path="/animaux" element={<Animaux />} />
+        <Route path="*" element={<h1>Error 418: I'm a Teapot</h1>} />
+      </Routes>
+      <Footer/>
+    </Router>
+  );
+};
 
 export default App;

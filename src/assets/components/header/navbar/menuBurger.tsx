@@ -1,65 +1,73 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Dropdown, DropdownToggle } from 'react-bootstrap';
-import './Burger.css'
+import { Link } from 'react-router-dom';
+import './Burger.css'; // Assume que tu as les styles dans ce fichier
 
-// Typage du composant avec React.FC
 const MenuBurger: React.FC = () => {
-    const [isOpen, setOpen] = useState(false);
-    const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isOpen, setOpen] = useState(false);
+  const burgerRef = useRef<HTMLDivElement>(null);
 
-    // Cette fonction sera appelée lors du clic sur le burger
-    const toggleBurger = () => {
-        setOpen(!isOpen); // Inverse l'état
+  // Fonction pour basculer l'ouverture du menu
+  const toggleBurger = () => {
+    setOpen(!isOpen);
+  };
+
+  // Ferme le menu si on clique en dehors de celui-ci
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (burgerRef.current && !burgerRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
     };
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            // Vérifie si le clic est en dehors du dropdown
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-                setOpen(false);
-            }
-        };
 
-        document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
-        // Cleanup pour éviter les fuites de mémoire
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-        
-    }, []);
+  return (
+    <div ref={burgerRef} className="menu-burger-container">
+      {/* Burger Icon */}
+      <div
+        id="nav-icon"
+        className={isOpen ? "open" : ""}
+        onClick={toggleBurger}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-    return (
-        <div >
-            <Dropdown show={isOpen} onToggle={() => setOpen(!isOpen)}>
-                
-                    <DropdownToggle  variant="success">
-                        <div ref={dropdownRef}
-                            id="nav-icon" 
-                            className={isOpen ? "open" : ""} // Ajoute la classe "open" si isOpen est true
-                            onClick={toggleBurger} // Ajoute l'événement de clic
-                            >
-                            <span></span>
-                            <span></span>
-                            
-                            <span></span>
-                            <span></span>
-                            
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </DropdownToggle>
-                
-                <Dropdown.Menu className='dropdown-menu '>
-                    <Dropdown.Item className='dropdown-item' href="#/action-1">Accueil</Dropdown.Item>
-                    <Dropdown.Item className='dropdown-item' href="#/action-2">Animations</Dropdown.Item>
-                    <Dropdown.Item className='dropdown-item' href="#/action-3">Habitats</Dropdown.Item>
-                    <Dropdown.Item className='dropdown-item' href="#/action-3">Animaux</Dropdown.Item>
-                    <Dropdown.Item className='dropdown-item' href="#/action-3">Restauration</Dropdown.Item>
-                    <Dropdown.Item style={{color: "var(--warning)"}} className='dropdown-item' href="#/action-3">Connexion</Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
-        </div>
-    );
+      {/* Menu Items */}
+      <nav className={`menu-items ${isOpen ? "open" : ""}`}>
+        <ul>
+          <li onClick={toggleBurger}>
+            <Link to="/">Accueil</Link>
+          </li>
+          <li onClick={toggleBurger}>
+            <Link to="/animation">Animations</Link>
+          </li>
+          <li onClick={toggleBurger}>
+            <Link to="/habitats">Habitats</Link>
+          </li>
+          <li onClick={toggleBurger}>
+            <Link to="/animaux">Animaux</Link>
+          </li>
+          <li onClick={toggleBurger}>
+            <Link to="/restauration">Restauration</Link>
+          </li>
+          <li onClick={toggleBurger}>
+            <Link to="/connexion" style={{ color: "var(--warning)" }}>
+              Connexion
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 };
 
 export default MenuBurger;
