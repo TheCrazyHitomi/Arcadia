@@ -3,7 +3,7 @@ import { Dropdown, DropdownToggle } from 'react-bootstrap';
 import './Burger.css'
 
 // Typage du composant avec React.FC
-const MenuBurger: React.FC = () => {
+const MenuBurger2: React.FC = () => {
     const [isOpen, setOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -62,4 +62,4 @@ const MenuBurger: React.FC = () => {
     );
 };
 
-export default MenuBurger;
+export default MenuBurger2;

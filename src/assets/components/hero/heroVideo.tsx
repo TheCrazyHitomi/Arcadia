@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const HeroVideo: React.FC = () =>{
     return(
         <video autoPlay muted loop width="100%">

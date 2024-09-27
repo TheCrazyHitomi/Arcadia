@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
 // Importation des composants et des logos
-import MenuBurger from './menuBurger';
+
 import InfoButtons from './infoButtons';
 import LogoVar1 from '../../../image/SVG/LogoVar1.tsx';
 import LogoVar2 from '../../../image/SVG/Logovar2.tsx';
 import LogoVar3 from '../../../image/SVG/LogoVar3.tsx';
+import MenuBurger from './menuBurger.tsx';
 
 // Typage du composant Navbar
 const Navbar: React.FC = () => {

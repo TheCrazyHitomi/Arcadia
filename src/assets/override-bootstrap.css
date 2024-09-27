@@ -25,11 +25,7 @@ body{
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
-
-.form-control:focus{
-    border-color: 0.4rem solid var(--info);
-    box-shadow: 0 0 0.4rem 0.25rem var(--success);
-}
+/* fonts */
 
 @font-face {
     font-family: 'Young Serif Regular';
@@ -77,6 +73,75 @@ src: local('Space Grotesk Bold'), url('./font/SpaceGrotesk-Bold.woff') format('w
 }
 
 
+h1 {
+    font-size: 5vw;
+    font-family: 'Young Serif Regular', serif;
+}
+
+
+
+h2 {
+    font-size: 2.5vw;
+    font-family: 'Young Serif Regular', serif;
+}
+
+h3 {
+    font-size: 1vw;
+    font-family: 'Space Grotesk Regular';
+
+}
+
+
+p{
+    font-family: "Space Grotesk Regular";
+    font-size: x-small;
+    margin: 0;
+}
+
+a{
+    font-family: 'Space Grotesk Regular';
+    text-decoration: none;
+    color: var(--warning);
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2.7vw;
+        font-family: 'Young Serif Regular', serif;
+    }
+    h3 {
+        font-size: 2vw;
+        font-family: 'Space Grotesk Regular';
+    
+    }
+}
+
+
+.icons{
+    width: 48px;
+    height: 48px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+@media (max-width: 768px) {
+    .icons{
+        width: 30px;
+        height: 30px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+}
+
+
+.form-control:focus{
+    border-color: 0.4rem solid var(--info);
+    box-shadow: 0 0 0.4rem 0.25rem var(--success);
+}
+
+/* variants class button */
 
 .btn-primary {
     --bs-btn-padding-x: 0.15vw;
@@ -103,7 +168,7 @@ src: local('Space Grotesk Bold'), url('./font/SpaceGrotesk-Bold.woff') format('w
 .btn-primary2 {
     --bs-btn-padding-x: 2vw;
     --bs-btn-padding-y: 0.25vw;
-    --bs-btn-color: var(--light);
+    --bs-btn-color: var(--info);
     --bs-btn-bg: var(--primary);
     --bs-btn-border-color: var(--primary);
     --bs-btn-hover-color: var(--light);
@@ -122,6 +187,7 @@ src: local('Space Grotesk Bold'), url('./font/SpaceGrotesk-Bold.woff') format('w
     align-items: center;
     font-family: 'Space Grotesk Light', sans-serif;
 }
+
 .btn-outline-primary {
     --bs-btn-color: var(--primary);
     --bs-btn-border-color: var(--primary);
@@ -167,11 +233,11 @@ src: local('Space Grotesk Bold'), url('./font/SpaceGrotesk-Bold.woff') format('w
     --bs-btn-color: var(--primary);
     --bs-btn-bg: var(--success);
     --bs-btn-border-color: var(--success);
-    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-color: var(--info);
     --bs-btn-hover-bg: var(--secondary);;
     --bs-btn-hover-border-color: var(--secondary);
     --bs-btn-focus-shadow-rgb: 49,132,253;
-    --bs-btn-active-color: #fff;
+    --bs-btn-active-color: var(--info);
     --bs-btn-active-bg: var(--warning);
     --bs-btn-active-border-color: var(--warning);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -189,11 +255,11 @@ src: local('Space Grotesk Bold'), url('./font/SpaceGrotesk-Bold.woff') format('w
     --bs-btn-color: var(--primary);
     --bs-btn-bg: var(--info);
     --bs-btn-border-color: var(--info);
-    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-color: var(--info);
     --bs-btn-hover-bg: var(--secondary);;
     --bs-btn-hover-border-color: var(--secondary);
     --bs-btn-focus-shadow-rgb: 49,132,253;
-    --bs-btn-active-color: #fff;
+    --bs-btn-active-color: var(--light);
     --bs-btn-active-bg: #ff8e31;
     --bs-btn-active-border-color: var(--secondary);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -230,14 +296,14 @@ src: local('Space Grotesk Bold'), url('./font/SpaceGrotesk-Bold.woff') format('w
 .btn-warning {
     --bs-btn-padding-x: 0.15em;
     --bs-btn-padding-y: 0.15em;
-    --bs-btn-color: #fff;
+    --bs-btn-color: var(--light);
     --bs-btn-bg: var(--warning);
     --bs-btn-border-color: var(--warning);
-    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-color: var(--info);
     --bs-btn-hover-bg: var(--secondary);;
     --bs-btn-hover-border-color: var(--secondary);
     --bs-btn-focus-shadow-rgb: 49,132,253;
-    --bs-btn-active-color: #fff;
+    --bs-btn-active-color: var(--primary);
     --bs-btn-active-bg: var(--success);
     --bs-btn-active-border-color: var(--success);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -252,10 +318,10 @@ src: local('Space Grotesk Bold'), url('./font/SpaceGrotesk-Bold.woff') format('w
 .btn-warning2 {
     --bs-btn-padding-x: 2vw;
     --bs-btn-padding-y: 0.25vw;
-    --bs-btn-color: #fff;
+    --bs-btn-color: var(--light);
     --bs-btn-bg: var(--warning);
     --bs-btn-border-color: var(--warning);
-    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-color: var(--light);
     --bs-btn-hover-bg: var(--secondary);;
     --bs-btn-hover-border-color: var(--secondary);
     --bs-btn-focus-shadow-rgb: 49,132,253;
@@ -272,13 +338,68 @@ src: local('Space Grotesk Bold'), url('./font/SpaceGrotesk-Bold.woff') format('w
     font-family: 'Space Grotesk Light', sans-serif;
 }
 
-.hamburger{
-    width: auto;
+
+
+/* header & navbar */
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    }
+
+.navbar {
+    position: fixed;
+    z-index: 20000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms ease;
+    position: fixed;
+    background: transparent;
+    width: 100%;
+    height: 8vw; 
+    }
+
+    @media (max-width: 768px) {
+        .navbar{
+            height: 4vw;
+        }
+    }
+
+
+.navbar-scrolled {
+    background-color: var(--light);
+    }
+    
+
+/* Menu Burger & menu déroulant */
+
+.dropdown-toggle{
+    width: 48px;
+    height: 48px;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+@media (max-width: 768px) {
+    .dropdown-toggle{
+        width: 30px;
+        height: 30px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
 }
 
 .dropdown-toggle::after{
     content: none;
 }
+
 
 .dropdown-menu{
     position: absolute;
@@ -299,64 +420,24 @@ src: local('Space Grotesk Bold'), url('./font/SpaceGrotesk-Bold.woff') format('w
 .dropdown-item:hover{
     background-color: var(--info);
     border-left: 0.5vw solid var(--secondary);
-}
+}    
 
-h1 {
-    font-size: 5vw;
-    font-family: 'Young Serif Regular', serif;
-}
-
-h2 {
-    font-size: 2.5vw;
-    font-family: 'Young Serif Regular', serif;
-}
-
-
-h3 {
-    font-size: 1vw;
-    font-family: 'Space Grotesk Regular';
-
-}
-
-p{
-    font-family: "Space Grotesk Regular";
-    font-size: x-small;
-    margin: 0;
-}
-
-a{
-    font-family: 'Space Grotesk Regular';
-    text-decoration: none;
-    color: var(--warning);
-}
-
-.navbar {
-    position: fixed;
-    z-index: 20000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 500ms ease;
-    position: fixed;
-    background: transparent;
-    width: 100%;
-    height: 120px; 
-    }
-
-.navbar-scrolled {
-    background-color: var(--light);
-    }
-
-
-
-
-.header{
+.navbarButton{
     display: flex;
     flex-direction: row;
+    width: 6vw;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 80%;
+}
+
+@media (max-width: 768px){
+    .infoButton{
+            width: 30px;
+            height: 30px;
     }
+}
+
+/* Hero / Video */
 
 .hero{
     position: relative;
@@ -379,6 +460,9 @@ a{
     align-content: center;
     z-index: 1000;
 }
+
+
+
 
 .frontCards{
     display: flex;
@@ -464,15 +548,6 @@ a{
 }
 
 
-.navbarButton{
-    display: flex;
-    flex-direction: row;
-    width: 6vw;
-    display: flex;
-    justify-content: space-between;
-}
-
-
 
 .allOverCards{
     width:100vw;
@@ -554,6 +629,20 @@ a{
     color: var(--primary);
 }
 
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 768px) {
+    .card-title{
+        font-size: 2vw;
+    }
+}
+
+
+/* formulaire de contact */
+
 .contact{
     color: var(--primary);
     display: flex;
@@ -568,13 +657,12 @@ a{
     padding: 3vw 7vw 3vw 7vw;
 }
 
+
 .infoContact{
     width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
-
 }
 
 .infoDiv{
@@ -617,6 +705,25 @@ a{
     width: 30%;
     margin-top: 1.5vw;
 }
+
+@media (max-width: 768px) {
+    .contact{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .infoContact{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .contactForm{
+        width: 100%;
+    }
+}
+
 
 .intro{
     margin-top: -2vw;
@@ -692,6 +799,8 @@ a{
     z-index: 2;
     text-align: center;
 }
+
+/* Footer & newsletter */
 
 .footer{
     font-family: 'Space Grotesk Regular';

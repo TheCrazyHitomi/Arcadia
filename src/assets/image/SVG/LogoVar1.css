@@ -1,0 +1,22 @@
+.Logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    max-width: 250px; /* Ajuste cette valeur selon la taille maximale souhaitée */
+    margin: 0 auto; /* Centrer le logo */
+}
+
+
+.responsive-logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .responsive-logo{
+        height: 10vw;
+        width: 30vw;
+    }
+}
