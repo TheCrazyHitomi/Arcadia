@@ -7,15 +7,15 @@ import { Button } from "react-bootstrap";
 const elementCards = [
     {
         titre: "Savane",
-        image: "src/assets/image/FrontCards/animationPic.jpg",
+        image: "src/assets/image/photo-1664140089727-c0b8b53de6ee.avif",
     },
     {
         titre: "Jungle",
-        image: "src/assets/image/FrontCards/habitatPic.jpg",
+        image: "src/assets/image/photo-1541959833400-049d37f98ccd.avif",
     },
     {
         titre: "Marais",
-        image: "src/assets/image/FrontCards/animalPic.jpg",
+        image: "src/assets/image/photo-1686677588339-dff6fa7eb21b.avif",
     },
 ];
 
@@ -23,8 +23,8 @@ const MainCards: React.FC = () =>{
     return(
         <>
             <div className="overCards">
-                <h2>KAKOU KAKOU</h2>
-                <h3>blablabla</h3>
+                <h2>Les Habitats</h2>
+                <h3>Découvrez chaque animal dans un environnement le plus proche de son habitat naturel.</h3>
                     <div className="mainCards">
                             {
                                 elementCards.map((elementCard, index) => {

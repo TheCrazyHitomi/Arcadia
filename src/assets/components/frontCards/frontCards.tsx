@@ -31,8 +31,8 @@ const FrontCards: React.FC = () =>{
     return(
         <>
             <div className="frontCards">
-                <h1>Kakou Kakou</h1>
-                <h3>bla bla bla</h3>
+                <h1>Tout sur le parc</h1>
+                <h3>un aperçu de l'environement, et des infrastructures.</h3>
             <div className="navCards">
                 {
                     navCards.map((navCard, index) => {
