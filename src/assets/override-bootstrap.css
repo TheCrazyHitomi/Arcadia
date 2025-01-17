@@ -17,6 +17,7 @@
 }
 
 body{
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -829,13 +830,26 @@ a{
 }
 
 .visitComponent{
-    padding: 0 4vw 6vw 4vw;
+    width: 100vw;
+    height:50vw;
+    margin-top: 4vw;
+    padding: 6vw 0 6vw 0vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("./image/background/leaf3.png");
-    background-size: cover;
 }
+
+.visit-background{
+    width: 100vw;
+    height:50vw;
+    object-fit: cover;
+    position: relative;
+}
+
+.visit-content{
+    position: absolute;
+}
+
 .visitTxt{
     margin: 4vw;
     padding-bottom: 3vw;
@@ -846,6 +860,7 @@ a{
 }
 
 .visitPics{
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -861,7 +876,8 @@ a{
 }
 
 .animPic{
-    position: relative;
+
+    position: absolute;
     width: 40vw;
     height: 20vw;
     object-fit: cover;
@@ -885,7 +901,7 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     margin-top: 2rem;
     padding: 2rem 0 2rem 0;
 }
