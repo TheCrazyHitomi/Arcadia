@@ -830,10 +830,7 @@ a{
 }
 
 .visitComponent{
-    width: 100vw;
-    height:50vw;
     margin-top: 4vw;
-    padding: 6vw 0 6vw 0vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -851,7 +848,7 @@ a{
 }
 
 .visitTxt{
-    margin: 4vw;
+    margin: 0 7vw 2vw 7vw;
     padding-bottom: 3vw;
     color: var(--info);
     display: flex;
