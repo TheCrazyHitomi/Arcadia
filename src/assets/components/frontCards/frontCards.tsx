@@ -9,19 +9,19 @@ interface NavCard {
 const navCards: NavCard[] = [
     {
         titre: "Animation",
-        image: "src/assets/image/FrontCards/animationPic.jpg",
+        image: "./image/FrontCards/animationPic.jpg",
     },
     {
         titre: "Les habitats",
-        image: "src/assets/image/FrontCards/habitatPic.jpg",
+        image: "./image/FrontCards/habitatPic.jpg",
     },
     {
         titre: "Les animaux",
-        image: "src/assets/image/FrontCards/animalPic.jpg",
+        image: "./image/FrontCards/animalPic.jpg",
     },
     {
         titre: "Restauration",
-        image: "src/assets/image/FrontCards/restoPic.jpg",
+        image: "./image/FrontCards/restoPic.jpg",
     },
     
 ];

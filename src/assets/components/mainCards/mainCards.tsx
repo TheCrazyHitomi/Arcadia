@@ -7,15 +7,15 @@ import { Button } from "react-bootstrap";
 const elementCards = [
     {
         titre: "Savane",
-        image: "src/assets/image/photo-1664140089727-c0b8b53de6ee.avif",
+        image: "./image/photo-1664140089727-c0b8b53de6ee.avif",
     },
     {
         titre: "Jungle",
-        image: "src/assets/image/photo-1541959833400-049d37f98ccd.avif",
+        image: "./image/photo-1541959833400-049d37f98ccd.avif",
     },
     {
         titre: "Marais",
-        image: "src/assets/image/photo-1686677588339-dff6fa7eb21b.avif",
+        image: "./image/photo-1686677588339-dff6fa7eb21b.avif",
     },
 ];
 

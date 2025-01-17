@@ -1,7 +1,7 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Outlet, Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
-import NewsletterIcon from "../../image/SVG/newsletterIcon";
+import NewsletterIcon from "../../../../public/image/SVG/newsletterIcon";
 
 // Déclaration du composant Newsletter avec le typage approprié
 const Newsletter: React.FC = () => {

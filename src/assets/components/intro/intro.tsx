@@ -37,7 +37,7 @@ const Intro: React.FC =() =>{
                         agrémentent ce parcours. </h3>
                 </div>
 
-                <img className="introPic" src="src/assets/image/vecteezy_ai-generated-yoga-advertisment-background-with-copy-space_37248635.jpg" alt="chariots petit train rouge"/>
+                <img className="introPic" src="./image/vecteezy_ai-generated-yoga-advertisment-background-with-copy-space_37248635.jpg" alt="chariots petit train rouge"/>
             </div>
         </>
     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import InfoIcon from '../../../image/SVG/infoIcon';
-import MapIcon from '../../../image/SVG/mapIcon';
+import InfoIcon from '../../../../../public/image/SVG/infoIcon';
+import MapIcon from '../../../../../public/image/SVG/mapIcon';
 
 // Définition du composant avec TypeScript
 const InfoButtons: React.FC = () => {

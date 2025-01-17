@@ -833,7 +833,7 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("../assets/image/background/leaf3.png");
+    background-image: url("./image/background/leaf3.png");
     background-size: cover;
 }
 .visitTxt{
