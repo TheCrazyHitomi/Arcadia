@@ -1,6 +1,6 @@
 # Deployment on Vercel
 
-##[Arcadia](https://arcadia-opal.vercel.app/)
+[Arcadia](https://arcadia-opal.vercel.app/)
 
 # React + TypeScript + Vite
 
